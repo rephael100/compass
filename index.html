@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulated 301 Redirect</title>
+</head>
+<body>
+    <h1>301 Moved Permanently (Simulated)</h1>
+    <p>The requested page has moved permanently. Please check the network analysis tools for more information.</p>
+
+    <script>
+        // Function to simulate logging the frame information for a 301 Moved Permanently response
+        function logFrameInfo(status, redirectURL) {
+            console.log(`Status: ${status}, Redirect to: ${redirectURL}`);
+        }
+
+        // Simulated status and URL
+        const simulatedStatus = '301 Moved Permanently';
+        const simulatedRedirectURL = 'https://www.example.com'; // The URL to redirect to
+
+        // Log the simulated response information
+        logFrameInfo(simulatedStatus, simulatedRedirectURL);
+
+        // Simulate redirection
+        window.location.replace(simulatedRedirectURL); // Use replace to avoid adding to the history
+    </script>
+</body>
+</html>
