@@ -7,9 +7,15 @@
 </head>
 <body>
     <h1>301 Moved Permanently</h1>
-    <p>The requested page has been moved. Please follow the link below:</p>
-    <p>Oops, the link is gone. Let's see if you can find the new link. Hint: the link is hidden in the HTML source code.</p>
-    
-    <!-- https://rephael100.github.io/The-Black-Pearl/ -->
+    <p>The requested resource has been moved permanently. The new URL is available but won't automatically redirect.</p>
+    <p>You need to manually access the new URL or check your network analysis tools.</p>
+
+    <script>
+        // Simulate server response with 301 status
+        console.log('HTTP/1.1 301 Moved Permanently');
+        console.log('Location: https://rephael100.github.io/The-Black-Pearl/');
+        console.log('Content-Length: 0');
+        console.log('Connection: close');
+    </script>
 </body>
 </html>
