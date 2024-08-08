@@ -1,34 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>301 Moved Permanently</title>
-  <style>
-    /* Make the redirection link hidden from view but visible in source */
-    .hidden-link {
-      color: white; /* Hides the link text */
-      position: absolute;
-      top: -9999px; /* Moves it out of view */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>301 Moved Permanently</title>
 </head>
 <body>
-  <h1>301 Moved Permanently</h1>
-  <p>The requested page is not available. Please check network analysis tools for more information.</p>
-
-  <!-- Hidden redirection link -->
-  <a href="https://rephael100.github.io/The-Black-Pearl/" class="hidden-link">https://rephael100.github.io/The-Black-Pearl/</a>
-
-  <script>
-    // Function to simulate logging the frame information for a 301 Moved Permanently response
-    function logFrameInfo(status, redirectURL) {
-      console.log(`HTTP/1.1 ${status}`);
-      console.log(`Location: ${redirectURL}`);
-      console.log('Content-Length: 0');
-      console.log('Connection: close');
-    }
-
-    // Simulate server response by logging to console
-    logFrameInfo('301 Moved Permanently', 'https://rephael100.github.io/The-Black-Pearl/');
-  </script>
+    <h1>301 Moved Permanently</h1>
+    <p>The requested page has been moved. Please follow the link below:</p>
+    <p>Oops, the link is gone. Let's see if you can find the new link. Hint: the link is hidden in the HTML source code.</p>
+    
+    <!-- Hidden link: <a href="https://rephael100.github.io/The-Black-Pearl/">Go to the new page</a> -->
 </body>
 </html>
