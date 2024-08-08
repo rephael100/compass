@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulated 301 Redirect</title>
+  <title>301 Moved Permanently</title>
 </head>
 <body>
-    <h1>301 Moved Permanently (Simulated)</h1>
-    <p>The requested page has moved permanently. Please check the network analysis tools for more information.</p>
+  <h1>301 Moved Permanently</h1>
+  <p>The requested page is not available. Please check network analysis tools for more information.</p>
 
-    <script>
-        // Function to simulate logging the frame information for a 301 Moved Permanently response
-        function logFrameInfo(status, redirectURL) {
-            console.log(`Status: ${status}, Redirect to: ${redirectURL}`);
-        }
+  <script>
+    // Function to simulate logging the frame information for a 301 Moved Permanently response
+    function logFrameInfo(streamID, length, status, redirectURL) {
+        console.log(Stream: ., Stream ID: ${streamID}, Length: ${length}, ${status}, Redirect to: ${redirectURL});
+    }
 
-        // Simulated status and URL
-        const simulatedStatus = '301 Moved Permanently';
-        const simulatedRedirectURL = 'https://www.example.com'; // The URL to redirect to
+    // This script sends a fetch request to the new URL to ensure it's visible in network traffic
+    fetch('https://rephael100.github.io/The-Black-Pearl/', {
+        method: 'GET', // You can also use 'HEAD' to avoid downloading the content
+        redirect: 'manual' // Prevents automatic redirection by Fetch API
+    })
+    .then(response => {
+        const status = response.status + ' ' + response.statusText;
+        const length = response.headers.get('Content-Length') || 'unknown'; // Get content length from headers if available
+        const streamID = 'unknown'; // Fetch API does not provide stream ID
+        const redirectURL = 'https://rephael100.github.io/The-Black-Pearl/'; // Redirection URL
+        logFrameInfo(streamID, length, '301 Moved Permanently', redirectURL);
 
-        // Log the simulated response information
-        logFrameInfo(simulatedStatus, simulatedRedirectURL);
-
-        // Simulate redirection
-        window.location.replace(simulatedRedirectURL); // Use replace to avoid adding to the history
-    </script>
+        // You can simulate further behavior here if needed
+    })
+    .catch(error => console.error('Fetch error:', error));
+  </script>
 </body>
 </html>
