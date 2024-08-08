@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>301 Moved Permanently</title>
     <style>
-        /* Style to make the text effectively invisible on the page */
+        /* Normal page styling */
         body {
-            background-color: #000;
-            color: #fff; /* Set text color to white */
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light gray background for the page */
+            color: #000; /* Black text color for normal content */
         }
         .hidden-text {
-            color: #fff; /* Set text color to white */
-            visibility: hidden; /* Ensure it's not visible */
+            color: #fff; /* White text color for hidden message */
+            background-color: #fff; /* White background to blend in */
+            position: absolute; /* Position it out of view */
+            top: -9999px; /* Move it out of the viewport */
+            left: -9999px;
         }
     </style>
 </head>
 <body>
-    <h1 class="hidden-text">301 Moved Permanently</h1>
-    <p class="hidden-text">The requested page has been moved. Please follow the link below:</p>
-    <p><a href="https://rephael100.github.io/The-Black-Pearl/" class="hidden-text">Go to the new page</a></p>
+    <h1>301 Moved Permanently</h1>
+    <p>The requested page has been moved. Please follow the link below:</p>
+    <p><a href="https://rephael100.github.io/The-Black-Pearl/">Go to the new page</a></p>
     <p class="hidden-text">Redirect URL: https://rephael100.github.io/The-Black-Pearl/</p>
 </body>
 </html>
